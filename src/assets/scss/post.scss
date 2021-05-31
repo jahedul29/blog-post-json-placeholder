@@ -1,0 +1,43 @@
+.post-list {
+  .single-post {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #000;
+
+    &:hover() {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .user-image {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .action-icons{
+        display: flex;
+        align-items: center;
+
+        
+        svg{
+            font-size: 1.3rem;
+        }
+    }
+  }
+}
+
+.post-details{
+    display: flex;
+    margin-top: 20px;
+
+    .details-user-image {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+}

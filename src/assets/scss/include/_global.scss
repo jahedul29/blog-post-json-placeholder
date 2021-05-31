@@ -1,0 +1,23 @@
+.custom-container {
+  min-height: 85vh;
+  margin-top: 30px;
+
+  @media screen and (max-width: 700px) {
+    margin: 10px;
+  }
+}
+
+.main-container {
+  background-color: rgb(223, 223, 223);
+}
+
+.normal-link {
+  color: #000;
+  text-decoration: none;
+
+  &:hover {
+        color: #000;
+        text-decoration: none;
+   
+  }
+}
