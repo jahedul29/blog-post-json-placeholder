@@ -1,71 +1,49 @@
-# Getting Started with Create React App
+#Blog App 
+[Visit live website](https://blog-post-json.web.app/)
+###Welcome to blog app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##`Description`
+This is a simple blog app. Basic feature of a blog app are included here. Feel free to use it and clone the code if it help you.
 
-## Available Scripts
+##`Features`
+**1.** User can see all the “Posts” 
+  * Load the first 10 posts as the page loads 
+  * Add a “load more” button, which if clicked, load 10 more posts 
 
-In the project directory, you can run:
+**2.** As a user, on users profile profile, user can - 
+* See my own posts 
+* Have the option to update the posts 
+* Have the option to delete the posts 
+* Assuming user id 2 as current user 
+  
+**3.** As a user user can add a new post with “Post title” and “Description” 
 
-### `yarn start`
+**4.** As a user I want to see post details with respective comments along with the post on a separate page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**5.** As a user user can see all the other users listed in a table. (No plugin used for table) 
+* Shown the columns - “Name”, “Email”, “Website” 
+* Option to sort columns with name, email. (ASC, DSC) 
+* Option to search users from table name, email, website. User can search with single key or with any combination of the keys.
+* If user reload the page then show the list according to the state (filter/sort/pagination/page size) before the reload 
+* Clicking on a user’s name will take me to the corresponding user profile page where the details for that user will be shown as well as his/her all posts.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+##`How to Run`
+1. Git clone.
+2. yarn install/ npm install (to install required packages).
+3. yarn start/ npm start (to run the project)
 
-### `yarn test`
+##`Used Technologies`
+1. ReactJS
+2. Bootstrap
+3. Firebase (For hosting)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##`Third part packages`
+1. [React icons](https://react-icons.github.io/react-icons/)(for icons)
+2. [React Toastify](https://fkhadra.github.io/react-toastify/introduction/) (for floating notifications)
+3. [Axios](https://axios-http.com/docs/intro) (for http requests)
+4. [React Router Dom](https://reactrouter.com/web/guides/quick-start) (for routing)
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# blog-post-json-placeholder
+##`Essential Links`
+Blog App Live preview: [https://blog-post-json.web.app/](https://blog-post-json.web.app/)
+Github repository : [https://github.com/jahedul29/blog-post-json-placeholder](https://github.com/jahedul29/blog-post-json-placeholder)
