@@ -1,11 +1,11 @@
-#Blog App 
+# Blog App 
 [Visit live website](https://blog-post-json.web.app/)
-###Welcome to blog app
+### Welcome to blog app
 
-##`Description`
+## `Description`
 This is a simple blog app. Basic feature of a blog app are included here. Feel free to use it and clone the code if it help you.
 
-##`Features`
+## `Features`
 **1.** User can see all the “Posts” 
   * Load the first 10 posts as the page loads 
   * Add a “load more” button, which if clicked, load 10 more posts 
@@ -27,23 +27,23 @@ This is a simple blog app. Basic feature of a blog app are included here. Feel f
 * If user reload the page then show the list according to the state (filter/sort/pagination/page size) before the reload 
 * Clicking on a user’s name will take me to the corresponding user profile page where the details for that user will be shown as well as his/her all posts.
 
-##`How to Run`
+## `How to Run`
 1. Git clone.
-2. yarn install/ npm install (to install required packages).
-3. yarn start/ npm start (to run the project)
+2. yarn install / npm install (to install required packages).
+3. yarn start / npm start (to run the project)
 
-##`Used Technologies`
+## `Used Technologies`
 1. ReactJS
 2. Bootstrap
 3. Firebase (For hosting)
 
-##`Third part packages`
+## `Third part packages`
 1. [React icons](https://react-icons.github.io/react-icons/)(for icons)
 2. [React Toastify](https://fkhadra.github.io/react-toastify/introduction/) (for floating notifications)
 3. [Axios](https://axios-http.com/docs/intro) (for http requests)
 4. [React Router Dom](https://reactrouter.com/web/guides/quick-start) (for routing)
 
 
-##`Essential Links`
+## `Essential Links`
 Blog App Live preview: [https://blog-post-json.web.app/](https://blog-post-json.web.app/)
 Github repository : [https://github.com/jahedul29/blog-post-json-placeholder](https://github.com/jahedul29/blog-post-json-placeholder)
