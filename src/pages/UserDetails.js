@@ -12,9 +12,9 @@ const UserDetails = () => {
   const { posts, users } = useContext(DataContext);
 
   useEffect(() => {
-    setCurrentUser(users.find((user) => user.id == id));
-    setUsersPosts(posts.filter((post) => post.userId == id));
-  }, []);
+    setCurrentUser(users.find((user) => parseInt(user.id) === parseInt(id)));
+    setUsersPosts(posts.filter((post) => parseInt(post.userId) === parseInt(id)));
+  }, [posts, id, users]);
 
   return (
     <Layout>

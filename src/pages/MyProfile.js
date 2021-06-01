@@ -39,7 +39,6 @@ const MyProfile = () => {
   };
 
   const updatePost = (e) => {
-    console.log("inside submit", formData);
     if (!formData?.title && !formData?.body) {
       e.stopPropagation();
       setIsFormValidated(true);
@@ -64,7 +63,7 @@ const MyProfile = () => {
     setFormData({ id: id, title: selectedPost.title, body: selectedPost.body, userId: selectedPost.userId });
   };
 
-  console.log("testing-post", posts);
+  console.log("testing", posts);
 
   return (
     <Layout>
@@ -76,7 +75,7 @@ const MyProfile = () => {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Edit Post</Modal.Title>
+          <Modal.Title>Edit Blog</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form className="m-auto" noValidate validated={isFormValidated}>
@@ -121,10 +120,11 @@ const MyProfile = () => {
       <div className="custom-container">
       <Row >
         <Col xs={12} md={8} lg={8} sm={12} className="m-auto">
-          <h4>My Posts</h4>
+          <h4>My Blogs</h4>
           <div className="post-list mt-5">
-            {currentPosts?.map((post) => (
-              <div className="single-post justify-content-between">
+            {currentPosts?.length > 0 ? <>
+              {currentPosts?.map((post) => (
+              <div key={post.id} className="single-post justify-content-between">
                 <div className="d-flex">
                 <img
                   className="user-image"
@@ -159,7 +159,7 @@ const MyProfile = () => {
                 </div>
               </div>
             ))}
-            <div className="w-100 d-flex justify-content-center">
+            {userPosts?.length > 10 && <div className="w-100 d-flex justify-content-center">
               <Button
                 variant="secondary"
                 className="my-3"
@@ -167,7 +167,10 @@ const MyProfile = () => {
               >
                 Load More
               </Button>
-            </div>
+            </div>}
+            
+            </>: <h4>No post exist. Please create one!</h4>}
+            
           </div>
         </Col>
       </Row>

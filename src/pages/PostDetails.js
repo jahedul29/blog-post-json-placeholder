@@ -11,8 +11,8 @@ const PostDetails = () => {
   const { posts, comments } = useContext(DataContext);
 
   useState(() => {
-    setCurrentPost(posts.find((p) => p.id == id));
-    setCurrentComments(comments.filter((c) => c.postId == id));
+    setCurrentPost(posts.find((p) => parseInt(p.id) === parseInt(id)));
+    setCurrentComments(comments.filter((c) => parseInt(c.postId) === parseInt(id)));
   }, [id, posts]);
 
   return (

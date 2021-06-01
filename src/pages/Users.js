@@ -22,14 +22,12 @@ const Users = () => {
     const sortByName = JSON.parse(localStorage.getItem("sort_by_name"));
     const sortByEmail = JSON.parse(localStorage.getItem("sort_by_email"));
 
-    console.log("browserData", browserData);
     if (browserData && browserData.length > 0) {
       setCurrentUserState(browserData);
       setSortedByName(sortByName?.order || "asc");
       setSortedByEmail(sortByEmail?.order || "asc");
       setFilterFormData(JSON.parse(localStorage.getItem("filterFormData")));
     } else {
-      console.log("browser");
       setCurrentUserState(users);
       localStorage.setItem("blog-data", JSON.stringify(users));
     }
@@ -171,7 +169,7 @@ const Users = () => {
                 <Row className="align-items-center justify-content-end my-2">
                   <Col sm={3} className="my-1">
                     <Form.Control
-                      defaultValue={filterFormData.name}
+                      defaultValue={filterFormData?.name}
                       name="name"
                       placeholder="Name"
                       onChange={handleFilterFormChange}
@@ -179,7 +177,7 @@ const Users = () => {
                   </Col>
                   <Col sm={3} className="my-1">
                     <Form.Control
-                      defaultValue={filterFormData.email}
+                      defaultValue={filterFormData?.email}
                       name="email"
                       placeholder="Email"
                       onChange={handleFilterFormChange}
@@ -187,7 +185,7 @@ const Users = () => {
                   </Col>
                   <Col sm={3} className="my-1">
                     <Form.Control
-                      defaultValue={filterFormData.website}
+                      defaultValue={filterFormData?.website}
                       name="website"
                       placeholder="Website"
                       onChange={handleFilterFormChange}
@@ -298,7 +296,7 @@ const Users = () => {
                 {currentUserState?.length > 0 ? (
                   <>
                     {currentUserState?.map((user) => (
-                      <tr>
+                      <tr key={user.id}>
                         <td>
                           <Link to={`/user/${user?.id}`}>
                           {user.name}
@@ -310,8 +308,8 @@ const Users = () => {
                     ))}
                   </>
                 ) : (
-                  <tr rowspan="5">
-                    <td colspan="3">No User found</td>
+                  <tr rowSpan="5">
+                    <td colSpan="3">No User found</td>
                   </tr>
                 )}
               </tbody>

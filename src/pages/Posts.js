@@ -7,7 +7,7 @@ import PostList from "../components/PostList";
 import { toast } from "react-toastify";
 
 const Posts = () => {
-  const [formData, setFormData] = useState({ id: "", title: "", body: "" });
+  const [formData, setFormData] = useState({ id: "", title: "", body: "", userId: 2 });
   const [isFormValidated, setIsFormValidated] = useState(false);
   const { posts, setPosts } = useContext(DataContext);
 
@@ -21,14 +21,17 @@ const Posts = () => {
       const data = formData;
       data.id = lastPost.id + 1;
       setPosts([data, ...posts]);
-      setFormData({ id: "", title: "", body: "" });
-      toast.success("Your post saves successfully");
+      setFormData({ id: "", title: "", body: "", userId: 2 });
+      toast.success("Your post saved successfully");
     }
   };
 
   const handleInputOnChange = (e) => {
+    e.stopPropagation();
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  console.log("testing-add", posts);
 
   return (
     <Layout>
