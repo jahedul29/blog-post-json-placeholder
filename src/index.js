@@ -2,7 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/scss/style.scss';
 import App from './App';
+
+// bootstrap css import
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+// Toastify required imports
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 

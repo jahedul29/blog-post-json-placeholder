@@ -33,7 +33,9 @@ const PostDetails = () => {
                 <p className="details-description">{currentPost?.body}</p>
               </div>
             </div>
+
             <hr/>
+
             <Row>
               <Col xs={12} md={8} lg={8} sm={12} className="m-auto">
               <h4 className="mb-4 mt-2">Comments</h4>
@@ -56,10 +58,13 @@ const PostDetails = () => {
                     </div>
                   </div>
                 ))}
+
               </Col>
             </Row>
+
           </Col>
         </Row>
+        
       </div>
     </Layout>
   );

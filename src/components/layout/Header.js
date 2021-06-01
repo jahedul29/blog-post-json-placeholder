@@ -3,13 +3,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 const Header = () => {
   return (
-    <Navbar
-      collapseOnSelect
-      expand="lg"
-      bg="dark"
-      variant="dark"
-      fixed="true"
-    >
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="true">
       <Container>
         <Navbar.Brand href="/">Blogs</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

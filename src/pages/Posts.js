@@ -7,13 +7,18 @@ import PostList from "../components/PostList";
 import { toast } from "react-toastify";
 
 const Posts = () => {
-  const [formData, setFormData] = useState({ id: "", title: "", body: "", userId: 2 });
+  const [formData, setFormData] = useState({
+    id: "",
+    title: "",
+    body: "",
+    userId: 2,
+  });
   const [isFormValidated, setIsFormValidated] = useState(false);
   const { posts, setPosts } = useContext(DataContext);
 
   const handleSubmit = (e) => {
     console.log("inside submit", formData);
-    if (!formData?.title && !formData?.body) {
+    if (!formData?.title || !formData?.body) {
       e.stopPropagation();
       setIsFormValidated(true);
     } else {
@@ -31,11 +36,11 @@ const Posts = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  console.log("testing-add", posts);
-
   return (
     <Layout>
       <div className="container custom-container">
+
+        {/* Post create form */}
         <div className="post-form">
           <Form
             as={Col}
@@ -81,6 +86,7 @@ const Posts = () => {
           </Form>
         </div>
 
+        {/* Post list */}
         <Row>
           <Col xs="12" md="6" lg="6" sm="12" className="m-auto">
             <PostList />

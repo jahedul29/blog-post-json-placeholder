@@ -33,11 +33,12 @@ const Users = () => {
     }
   }, [users]);
 
-  // useEffect(() => {
-  //   setCurrentUserState(users);
-  //   localStorage.setItem("blog-data", JSON.stringify(users));
-  // }, [isOperationPerformed]);
-
+  /**
+   * 
+   * @param {string} property | The key name base on which ou want to search
+   * @param {string} order | The order you want to sort 'asc'/'desc'
+   * @returns 
+   */
   const dynamicSort = (property, order) => {
     let sort_order = 1;
     if (order === "desc") {
@@ -61,15 +62,18 @@ const Users = () => {
     setFilterFormData({ ...filterFormData, [e.target.name]: e.target.value });
   };
 
+  // A huge method for search functionality
   const handleSearch = (e) => {
     localStorage.setItem("filterFormData", JSON.stringify(filterFormData));
     if (
+
       filterFormData.name === "" &&
       filterFormData.emial === "" &&
       filterFormData.website === ""
     ) {
       e.preventDefault();
     } else if (filterFormData.name === "" && filterFormData.email === "") {
+
       const filteredData = users.filter((user) =>
         user.website
           .toLowerCase()
@@ -78,6 +82,7 @@ const Users = () => {
       setCurrentUserState(filteredData);
       localStorage.setItem("blog-data", JSON.stringify(filteredData));
     } else if (filterFormData.name === "" && filterFormData.website === "") {
+
       const filteredData = users.filter((user) =>
         user.email
           .toLowerCase()
@@ -86,6 +91,7 @@ const Users = () => {
       setCurrentUserState(filteredData);
       localStorage.setItem("blog-data", JSON.stringify(filteredData));
     } else if (filterFormData.email === "" && filterFormData.website === "") {
+
       const filteredData = users.filter((user) =>
         user.name
           .toLowerCase()
@@ -94,6 +100,7 @@ const Users = () => {
       setCurrentUserState(filteredData);
       localStorage.setItem("blog-data", JSON.stringify(filteredData));
     } else if (filterFormData.name === "") {
+      
       const filteredData = users
         .filter((user) =>
           user.email
@@ -108,6 +115,7 @@ const Users = () => {
       setCurrentUserState(filteredData);
       localStorage.setItem("blog-data", JSON.stringify(filteredData));
     } else if (filterFormData.email === "") {
+
       const filteredData = users
         .filter((user) =>
           user.name
@@ -122,6 +130,7 @@ const Users = () => {
       setCurrentUserState(filteredData);
       localStorage.setItem("blog-data", JSON.stringify(filteredData));
     } else if (filterFormData.website === "") {
+
       const filteredData = users
         .filter((user) =>
           user.name
@@ -136,6 +145,7 @@ const Users = () => {
       setCurrentUserState(filteredData);
       localStorage.setItem("blog-data", JSON.stringify(filteredData));
     } else {
+
       const filteredData = users
         .filter((user) =>
           user.name
@@ -157,6 +167,8 @@ const Users = () => {
     }
   };
 
+
+
   return (
     <Layout>
       <div className="custom-container">
@@ -165,6 +177,8 @@ const Users = () => {
             <h4>Users List</h4>
 
             <div className="filter-form">
+
+              {/* Filter form */}
               <Form>
                 <Row className="align-items-center justify-content-end my-2">
                   <Col sm={3} className="my-1">
@@ -198,6 +212,7 @@ const Users = () => {
               </Form>
             </div>
 
+            {/* Showing all user in a table */}
             <Table striped bordered hover>
               <thead className="bg-secondary">
                 <tr>

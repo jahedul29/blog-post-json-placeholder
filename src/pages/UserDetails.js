@@ -35,7 +35,9 @@ const UserDetails = () => {
                 <p className="details-description">{currentUser?.website}</p>
               </div>
             </div>
+
             <hr />
+
             <Row>
               <Col xs={12} md={8} lg={8} sm={12} className="m-auto">
                 <h4 className="mb-4 mt-2">Posts</h4>
@@ -62,10 +64,13 @@ const UserDetails = () => {
                     </div>
                   </div>
                 ))}
+                
               </Col>
             </Row>
+
           </Col>
         </Row>
+
       </div>
     </Layout>
   );

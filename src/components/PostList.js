@@ -16,8 +16,10 @@ const PostList = () => {
     }
   }, [currentItems, posts]);
 
+
   return (
     <div className="post-list mt-5">
+
       {currentPosts.length > 0 ? (
         <>
           {currentPosts?.map((post) => (
@@ -40,6 +42,7 @@ const PostList = () => {
               </Link>
             </div>
           ))}
+
           {posts?.length > 10 && (
             <div className="w-100 d-flex justify-content-center">
               <Button
@@ -51,6 +54,7 @@ const PostList = () => {
               </Button>
             </div>
           )}
+          
         </>
       ) : <h4>No post exist. Please create one!</h4>}
     </div>
